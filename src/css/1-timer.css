@@ -1,0 +1,86 @@
+/* Стиль input календарю */
+.datetime-picker{
+    outline: none;
+    border: 1px solid #808080;
+    border-radius: 4px;
+    width: 272px;
+    height: 40px;
+
+    padding-left: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+}
+
+.datetime-picker:hover{
+    border: 1px solid #000000;
+}
+
+.datetime-picker:focus {
+    border: 1px solid #4e75ff;;
+}
+
+.datetime-picker:disabled {
+    color: #808080;
+}
+
+/* Стиль кнопки старт */
+.button-start{
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    width: 75px;
+    height: 40px;
+
+    background: #4e75ff;
+
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+}
+
+.button-start:hover{
+    background: #6c8cff;
+}
+
+.button-start:disabled{
+    background: #cfcfcf;
+}
+
+/* Стиль таймеру */
+
+.timer{
+    display: flex;
+    flex-direction: row;
+
+    
+}
+
+.value{
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+}
+.label{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #2e2f42;
+    text-transform: uppercase;
+}
+.field{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+}

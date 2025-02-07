@@ -30,3 +30,46 @@ main {
 main:has(.back-link) {
   text-align: center;
 }
+
+.nav {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.nav-list {
+  flex-direction: column;
+  display: flex;
+  gap: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.styles {
+  color: #000;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #003f7f;
+}
+
+a:focus {
+  outline: 2px dashed #0056b3;
+  outline-offset: 2px;
+}
