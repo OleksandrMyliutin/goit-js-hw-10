@@ -1,21 +1,20 @@
-// Імпортуємо iziToast
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
-// Знаходимо форму
+
 const form = document.querySelector(".form");
 
-// Додаємо обробник події
+
 form.addEventListener("submit", onFormSubmit);
 
 function onFormSubmit(event) {
-  event.preventDefault(); // Запобігаємо перезавантаженню сторінки
+  event.preventDefault(); 
 
-  // Отримуємо значення затримки та стану
+
   const delay = parseInt(form.querySelector('input[name="delay"]').value);
-  const state = form.querySelector('input[name="state"]:checked')?.value; // Перевіряємо, чи обраний стан
+  const state = form.querySelector('input[name="state"]:checked')?.value; 
 
-  // Валідуємо введені дані
+
   if (isNaN(delay) || delay <= 0) {
     iziToast.error({
       title: "Warning",
@@ -34,7 +33,6 @@ function onFormSubmit(event) {
     return;
   }
 
-  // Створюємо проміс
   const promise = new Promise((resolve, reject) => {
     setTimeout(() => {
       if (state === "fulfilled") {
@@ -45,7 +43,6 @@ function onFormSubmit(event) {
     }, delay);
   });
 
-  // Обробляємо результат промісу
   promise
     .then((delay) => {
       iziToast.success({
